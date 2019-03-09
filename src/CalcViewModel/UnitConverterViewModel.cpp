@@ -832,7 +832,8 @@ void UnitConverterViewModel::RefreshSupplementaryResults()
         SupplementaryResult^ result =
             ref new SupplementaryResult(
                 this->ConvertToLocalizedString(get<0>(suggestedValue), false),
-                ref new Unit(get<1>(suggestedValue)));
+                ref new Unit(get<1>(suggestedValue))
+            );
         if (result->IsWhimsical())
         {
             whimsicals.push_back(result);

@@ -500,7 +500,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::One,
             Command::Two
-            });
+        });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 
@@ -528,7 +528,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::One,
             Command::One
-            });
+        });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 
@@ -556,7 +556,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::Two,
             Command::Decimal
-            });
+        });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 
@@ -583,7 +583,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::One,
             Command::Two
-            });
+        });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 

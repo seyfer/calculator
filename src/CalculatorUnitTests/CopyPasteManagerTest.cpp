@@ -41,7 +41,7 @@ namespace CalculatorUnitTests
     }\
 }
 
-    // returns a iterator from end
+// returns a iterator from end
 #define START_LOOP(dataSet)\
 {\
     int size = sizeof(dataSet)/sizeof(*dataSet);\

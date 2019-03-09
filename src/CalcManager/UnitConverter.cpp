@@ -1032,7 +1032,7 @@ void UnitConverter::TrimString(wstring& returnString)
     if (returnString.find(L'.') != m_returnDisplay.npos)
     {
         wstring::iterator iter;
-        for (iter = returnString.end() - 1; ; iter--)
+        for (iter = returnString.end() - 1; ;iter--)
         {
             if (*iter != L'0')
             {

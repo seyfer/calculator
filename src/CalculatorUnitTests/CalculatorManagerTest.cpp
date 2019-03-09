@@ -551,9 +551,9 @@ namespace CalculatorManagerTest
 
         Command commands5[] = { Command::Command8, Command::CommandCUB, Command::CommandNULL };
         TestDriver::Test(L"512", L"cube(8)", commands5, true, true);
-        /*
-                Command commands6[] = { Command::Command8, Command::CommandCUB, Command::CommandCUBEROOT, Command::CommandNULL };
-                TestDriver::Test(L"8", L"cuberoot(cube(8))", commands6, true, true);*/
+/*
+        Command commands6[] = { Command::Command8, Command::CommandCUB, Command::CommandCUBEROOT, Command::CommandNULL };
+        TestDriver::Test(L"8", L"cuberoot(cube(8))", commands6, true, true);*/
 
         Command commands7[] = { Command::Command1, Command::Command0, Command::CommandLOG, Command::CommandNULL };
         TestDriver::Test(L"1", L"log(10)", commands7, true, true);

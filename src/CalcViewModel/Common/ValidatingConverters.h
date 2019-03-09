@@ -25,11 +25,11 @@ namespace CalculatorApp
                 return value;
             }
 
-                virtual Platform::Object^ ConvertBack(
-                    Platform::Object^ value,
-                    Windows::UI::Xaml::Interop::TypeName /*targetType*/,
-                    Platform::Object^ /*parameter*/,
-                    Platform::String^ /*language*/) = Windows::UI::Xaml::Data::IValueConverter::ConvertBack
+            virtual Platform::Object^ ConvertBack(
+                Platform::Object^ value,
+                Windows::UI::Xaml::Interop::TypeName /*targetType*/,
+                Platform::Object^ /*parameter*/,
+                Platform::String^ /*language*/) = Windows::UI::Xaml::Data::IValueConverter::ConvertBack
             {
                 if (value)
                 {
@@ -58,11 +58,11 @@ namespace CalculatorApp
                 return value;
             }
 
-                virtual Platform::Object^ ConvertBack(
-                    Platform::Object^ value,
-                    Windows::UI::Xaml::Interop::TypeName /*targetType*/,
-                    Platform::Object^ /*parameter*/,
-                    Platform::String^ /*language*/) = Windows::UI::Xaml::Data::IValueConverter::ConvertBack
+            virtual Platform::Object^ ConvertBack(
+                Platform::Object^ value,
+                Windows::UI::Xaml::Interop::TypeName /*targetType*/,
+                Platform::Object^ /*parameter*/,
+                Platform::String^ /*language*/) = Windows::UI::Xaml::Data::IValueConverter::ConvertBack
             {
                 // The value to be valid has to be a boxed int32 value
                 // extract that value and ensure it is valid, ie >= 0
