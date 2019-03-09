@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 //
@@ -37,7 +37,7 @@ NumberPad::NumberPad() :
     InitializeComponent();
 
     const auto& localizationSettings = LocalizationSettings::GetInstance();
-    
+
     this->decimalSeparatorButton->Content = localizationSettings.GetDecimalSeparator();
     this->num0Button->Content = localizationSettings.GetDigitSymbolFromEnUsDigit('0');
     this->num1Button->Content = localizationSettings.GetDigitSymbolFromEnUsDigit('1');

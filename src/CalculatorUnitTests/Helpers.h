@@ -8,9 +8,9 @@
 
 namespace CalculatorUnitTests
 {
-    #define StandardModePrecision       16
-    #define ScientificModePrecision     32
-    #define ProgrammerModePrecision     64
+#define StandardModePrecision       16
+#define ScientificModePrecision     32
+#define ProgrammerModePrecision     64
 
     typedef struct item
     {

@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -10,10 +10,10 @@ namespace CalculatorApp
 {
     namespace Controls
     {
-        public ref class CalculatorButton sealed: Windows::UI::Xaml::Controls::Button
+        public ref class CalculatorButton sealed : Windows::UI::Xaml::Controls::Button
         {
         public:
-  
+
             CalculatorButton();
             DEPENDENCY_PROPERTY_OWNER(CalculatorButton);
 

@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -180,9 +180,9 @@ void DateCalculatorViewModel::UpdateDisplayResult()
             StrDateDiffResultInDays = L"";
             StrDateDiffResult = AppResourceProvider::GetInstance().GetResourceString(L"Date_SameDates");
         }
-        else if ((m_dateDiffResult.year == 0) && 
-                (m_dateDiffResult.month == 0) && 
-                (m_dateDiffResult.week == 0))
+        else if ((m_dateDiffResult.year == 0) &&
+            (m_dateDiffResult.month == 0) &&
+            (m_dateDiffResult.week == 0))
         {
             IsDiffInDays = true;
             StrDateDiffResultInDays = L"";

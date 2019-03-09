@@ -37,7 +37,7 @@ public:
 class IOpndCommand : public IExpressionCommand
 {
 public:
-    virtual const std::shared_ptr<CalculatorVector<int>> & GetCommands() const= 0;
+    virtual const std::shared_ptr<CalculatorVector<int>> & GetCommands() const = 0;
     virtual void AppendCommand(int command) = 0;
     virtual void ToggleSign() = 0;
     virtual void RemoveFromEnd() = 0;

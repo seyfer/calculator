@@ -34,9 +34,9 @@ void SupplementaryItemsControl::PrepareContainerForItemOverride(DependencyObject
     }
 }
 
- AutomationPeer^ SupplementaryContentPresenter::OnCreateAutomationPeer()
- {
-     return ref new SupplementaryContentPresenterAP(this);
- }
+AutomationPeer^ SupplementaryContentPresenter::OnCreateAutomationPeer()
+{
+    return ref new SupplementaryContentPresenterAP(this);
+}
 
 

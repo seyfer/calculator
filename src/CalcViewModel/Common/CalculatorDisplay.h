@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -8,7 +8,7 @@
 namespace CalculatorApp
 {
     // Callback interface to be implemented by the CalculatorManager
-    class CalculatorDisplay: public ICalcDisplay
+    class CalculatorDisplay : public ICalcDisplay
     {
     public:
         CalculatorDisplay();

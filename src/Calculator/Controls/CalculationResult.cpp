@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -49,7 +49,7 @@ DEPENDENCY_PROPERTY_INITIALIZATION(CalculationResult, DisplayStringExpression);
 StringReference CalculationResult::s_FocusedState(L"Focused");
 StringReference CalculationResult::s_UnfocusedState(L"Unfocused");
 
-CalculationResult::CalculationResult():
+CalculationResult::CalculationResult() :
     m_startingFontSize(0.0),
     m_isScalingText(false),
     m_haveCalculatedMax(false)
@@ -80,7 +80,7 @@ void CalculationResult::OnApplyTemplate()
         // we can rescale the textbox
         m_textContainerLayoutChangedToken = m_textContainer->LayoutUpdated += ref new EventHandler<Object^>(this, &CalculationResult::OnTextContainerLayoutUpdated);
 
-        m_textContainer->ChangeView(m_textContainer->ExtentWidth - m_textContainer->ViewportWidth,nullptr,nullptr);
+        m_textContainer->ChangeView(m_textContainer->ExtentWidth - m_textContainer->ViewportWidth, nullptr, nullptr);
         m_scrollLeft = dynamic_cast<HyperlinkButton^>(GetTemplateChild("scrollLeft"));
         m_scrollRight = dynamic_cast<HyperlinkButton^>(GetTemplateChild("scrollRight"));
         auto borderContainer = dynamic_cast<UIElement^>(GetTemplateChild("border"));
@@ -175,7 +175,7 @@ void CalculationResult::UpdateVisualState()
     {
         VisualStateManager::GoToState(this, "Active", true);
     }
-    else 
+    else
     {
         VisualStateManager::GoToState(this, "Normal", true);
     }
@@ -190,7 +190,7 @@ void CalculationResult::UpdateTextState()
 
     auto containerSize = m_textContainer->ActualWidth;
     String^ oldText = m_textBlock->Text;
-    String^ newText =  Utils::LRO + DisplayValue + Utils::PDF;
+    String^ newText = Utils::LRO + DisplayValue + Utils::PDF;
 
     //Initiate the scaling operation
     //UpdateLayout will keep calling us until we make it through the below 2 if-statements
@@ -232,11 +232,11 @@ void CalculationResult::UpdateTextState()
         m_isScalingText = false;
         if (IsOperatorCommand)
         {
-            m_textContainer->ChangeView(0.0,nullptr,nullptr);
+            m_textContainer->ChangeView(0.0, nullptr, nullptr);
         }
         else
         {
-            m_textContainer->ChangeView(m_textContainer->ExtentWidth - m_textContainer->ViewportWidth,nullptr,nullptr);
+            m_textContainer->ChangeView(m_textContainer->ExtentWidth - m_textContainer->ViewportWidth, nullptr, nullptr);
         }
 
         if (m_scrollLeft && m_scrollRight)
@@ -312,7 +312,7 @@ void CalculationResult::OnScrollClick(Object^ sender, RoutedEventArgs^ /*e*/)
     }
 }
 
-void CalculationResult::OnPointerEntered(Platform::Object^ sender,  PointerRoutedEventArgs^ e)
+void CalculationResult::OnPointerEntered(Platform::Object^ sender, PointerRoutedEventArgs^ e)
 {
     if (e->Pointer->PointerDeviceType == PointerDeviceType::Mouse && m_textBlock->ActualWidth >= m_textContainer->ActualWidth)
     {
@@ -329,17 +329,17 @@ void CalculationResult::ShowHideScrollButtons(::Visibility vLeft, ::Visibility v
 void CalculationResult::UpdateScrollButtons()
 {
     // When the width is smaller than the container, don't show any
-    if (m_textBlock->ActualWidth < m_textContainer->ActualWidth) 
+    if (m_textBlock->ActualWidth < m_textContainer->ActualWidth)
     {
         ShowHideScrollButtons(::Visibility::Collapsed, ::Visibility::Collapsed);
     }
     // We have more number on both side. Show both arrows
-    else if (m_textContainer->HorizontalOffset > 0 && m_textContainer->HorizontalOffset < (m_textContainer->ExtentWidth - m_textContainer->ViewportWidth)) 
+    else if (m_textContainer->HorizontalOffset > 0 && m_textContainer->HorizontalOffset < (m_textContainer->ExtentWidth - m_textContainer->ViewportWidth))
     {
         ShowHideScrollButtons(::Visibility::Visible, ::Visibility::Visible);
     }
     // Width is larger than the container and left most part of the number is shown. Should be able to scroll left.
-    else if (m_textContainer->HorizontalOffset == 0) 
+    else if (m_textContainer->HorizontalOffset == 0)
     {
         ShowHideScrollButtons(::Visibility::Collapsed, ::Visibility::Visible);
     }

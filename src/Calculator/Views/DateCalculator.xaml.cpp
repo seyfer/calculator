@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 //
@@ -51,7 +51,7 @@ DateCalculator::DateCalculator()
     // Setting the FirstDayofWeek
     DateDiff_FromDate->FirstDayOfWeek = localizationSettings.GetFirstDayOfWeek();
     DateDiff_ToDate->FirstDayOfWeek = localizationSettings.GetFirstDayOfWeek();
-    
+
     // Setting the Language explicitly is not required,
     // this is a workaround for the bug in the control due to which
     // the displayed date is incorrect for non Gregorian Calendar Systems

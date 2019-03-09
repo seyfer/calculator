@@ -19,7 +19,7 @@ namespace CalculatorApp
         m_coreTitleBar(CoreApplication::GetCurrentView()->TitleBar)
     {
         InitializeComponent();
-        
+
         Loaded += ref new RoutedEventHandler(this, &TitleBar::OnLoaded);
         Unloaded += ref new RoutedEventHandler(this, &TitleBar::OnUnloaded);
 

@@ -76,7 +76,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
         // Place the frame in the current Window
         Window::Current->Content = rootFrame;
     }
-        
+
     Microsoft::VisualStudio::TestPlatform::TestExecutor::WinRTCore::UnitTestClient::CreateDefaultUI();
 
     Window::Current->Activate();
@@ -93,8 +93,8 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 /// <param name="e">Details about the suspend request.</param>
 void App::OnSuspending(Object^ sender, SuspendingEventArgs^ e)
 {
-    (void) sender; // Unused parameter
-    (void) e; // Unused parameter
+    (void)sender; // Unused parameter
+    (void)e; // Unused parameter
 
     //TODO: Save application state and stop any background activity
 }

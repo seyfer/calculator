@@ -8,13 +8,13 @@ namespace CalculatorApp
     namespace Common
     {
         template <typename TTarget>
-        ref class DelegateCommand: public Windows::UI::Xaml::Input::ICommand
+        ref class DelegateCommand : public Windows::UI::Xaml::Input::ICommand
         {
         internal:
 
             typedef void (TTarget::*CommandHandlerFunc)(Platform::Object^);
 
-            DelegateCommand(TTarget^ target, CommandHandlerFunc func):
+            DelegateCommand(TTarget^ target, CommandHandlerFunc func) :
                 m_weakTarget(target),
                 m_function(func)
             { }
@@ -34,18 +34,18 @@ namespace CalculatorApp
                 }
             }
 
-            virtual bool CanExecuteImpl(Platform::Object^ parameter) sealed = Windows::UI::Xaml::Input::ICommand::CanExecute
+                virtual bool CanExecuteImpl(Platform::Object^ parameter) sealed = Windows::UI::Xaml::Input::ICommand::CanExecute
             {
                 return true;
             }
 
-            virtual event Windows::Foundation::EventHandler<Platform::Object^>^ CanExecuteChangedImpl
+                virtual event Windows::Foundation::EventHandler<Platform::Object^>^ CanExecuteChangedImpl
             {
                 virtual Windows::Foundation::EventRegistrationToken add(Windows::Foundation::EventHandler<Platform::Object^>^ handler) sealed = Windows::UI::Xaml::Input::ICommand::CanExecuteChanged::add
                 {
                     return m_canExecuteChanged += handler;
                 }
-                virtual void remove(Windows::Foundation::EventRegistrationToken token) sealed = Windows::UI::Xaml::Input::ICommand::CanExecuteChanged::remove
+                    virtual void remove(Windows::Foundation::EventRegistrationToken token) sealed = Windows::UI::Xaml::Input::ICommand::CanExecuteChanged::remove
                 {
                     m_canExecuteChanged -= token;
                 }

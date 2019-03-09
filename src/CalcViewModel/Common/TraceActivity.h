@@ -34,7 +34,7 @@ namespace CalculatorApp
                 m_fields,
                 winrt::Windows::Foundation::Diagnostics::LoggingLevel::Verbose,
                 winrt::Windows::Foundation::Diagnostics::LoggingOptions(WINEVENT_KEYWORD_RESPONSE_TIME)
-                );
+            );
         }
 
         ~TraceActivity()

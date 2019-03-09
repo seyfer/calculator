@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -12,7 +12,7 @@ namespace CalculatorApp
     {
         struct OrderedUnit : UnitConversionManager::Unit
         {
-            OrderedUnit(){}
+            OrderedUnit() {}
 
             OrderedUnit(int id, std::wstring name, std::wstring abbreviation, int order, bool isConversionSource = false, bool isConversionTarget = false, bool isWhimsical = false)
                 : UnitConversionManager::Unit(id, name, abbreviation, isConversionSource, isConversionTarget, isWhimsical), order(order)
@@ -31,7 +31,7 @@ namespace CalculatorApp
 
         struct ExplicitUnitConversionData : UnitConversionManager::ConversionData
         {
-            ExplicitUnitConversionData(){}
+            ExplicitUnitConversionData() {}
             ExplicitUnitConversionData(CalculatorApp::Common::ViewMode categoryId, int parentUnitId, int unitId, double ratio, double offset, bool offsetFirst = false) :
                 categoryId(categoryId), parentUnitId(parentUnitId), unitId(unitId), UnitConversionManager::ConversionData(ratio, offset, offsetFirst)
             {

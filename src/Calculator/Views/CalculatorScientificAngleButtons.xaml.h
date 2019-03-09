@@ -27,7 +27,7 @@ namespace CalculatorApp
 
         COMMAND_FOR_METHOD(ButtonPressed, CalculatorScientificAngleButtons::OnAngleButtonPressed)
 
-        property bool IsErrorVisualState {
+            property bool IsErrorVisualState {
             bool get();
             void set(bool value);
         }
@@ -38,5 +38,5 @@ namespace CalculatorApp
         void HypButton_Toggled(_In_ Platform::Object^ sender, _In_ Windows::UI::Xaml::RoutedEventArgs^ e);
 
         bool m_isErrorVisualState;
-	};
+    };
 }

@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -42,10 +42,10 @@ DEPENDENCY_PROPERTY_INITIALIZATION(Calculator, IsScientific);
 DEPENDENCY_PROPERTY_INITIALIZATION(Calculator, IsProgrammer);
 
 Calculator::Calculator() :
-m_doAnimate(false),
-m_isLastAnimatedInScientific(false),
-m_isLastAnimatedInProgrammer(false),
-m_resultAnimate(false)
+    m_doAnimate(false),
+    m_isLastAnimatedInScientific(false),
+    m_isLastAnimatedInProgrammer(false),
+    m_resultAnimate(false)
 {
     SetFontSizeResources();
     InitializeComponent();
@@ -492,7 +492,7 @@ void Calculator::OnHistoryItemClicked(_In_ HistoryItemViewModel^ e)
     Model->SetExpressionDisplay(e->GetTokens(), e->GetCommands());
     Model->SetPrimaryDisplay(e->Result->Data(), false);
     Model->IsFToEEnabled = false;
-   
+
     TraceLogger::GetInstance().LogHistoryItemLoadEnd(tokenSize);
     CloseHistoryFlyout();
     this->Focus(::FocusState::Programmatic);
@@ -658,7 +658,7 @@ void Calculator::EnableMemoryControls(bool enable)
 void Calculator::EnableControls(bool enable)
 {
     OpsPanel->IsEnabled = enable;
-    
+
     EnableMemoryControls(enable);
 }
 

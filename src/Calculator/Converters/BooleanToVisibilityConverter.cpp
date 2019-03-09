@@ -17,9 +17,9 @@ namespace CalculatorApp
     {
         Object^ BooleanToVisibilityConverter::Convert(Object^ value, TypeName targetType, Object^ parameter, String^ language)
         {
-            (void) targetType;    // Unused parameter
-            (void) parameter;    // Unused parameter
-            (void) language;    // Unused parameter
+            (void)targetType;    // Unused parameter
+            (void)parameter;    // Unused parameter
+            (void)language;    // Unused parameter
 
             auto boxedBool = dynamic_cast<Box<bool>^>(value);
             auto boolValue = (boxedBool != nullptr && boxedBool->Value);
@@ -28,9 +28,9 @@ namespace CalculatorApp
 
         Object^ BooleanToVisibilityConverter::ConvertBack(Object^ value, TypeName targetType, Object^ parameter, String^ language)
         {
-            (void) targetType;    // Unused parameter
-            (void) parameter;    // Unused parameter
-            (void) language;    // Unused parameter
+            (void)targetType;    // Unused parameter
+            (void)parameter;    // Unused parameter
+            (void)language;    // Unused parameter
 
             auto visibility = dynamic_cast<Box<Visibility>^>(value);
             return (visibility != nullptr && visibility->Value == Visibility::Visible);
@@ -38,9 +38,9 @@ namespace CalculatorApp
 
         Object^ BooleanToVisibilityNegationConverter::Convert(Object^ value, TypeName targetType, Object^ parameter, String^ language)
         {
-            (void) targetType;    // Unused parameter
-            (void) parameter;    // Unused parameter
-            (void) language;    // Unused parameter
+            (void)targetType;    // Unused parameter
+            (void)parameter;    // Unused parameter
+            (void)language;    // Unused parameter
 
             auto boxedBool = dynamic_cast<Box<bool>^>(value);
             auto boolValue = (boxedBool != nullptr && boxedBool->Value);
@@ -49,9 +49,9 @@ namespace CalculatorApp
 
         Object^ BooleanToVisibilityNegationConverter::ConvertBack(Object^ value, TypeName targetType, Object^ parameter, String^ language)
         {
-            (void) targetType;    // Unused parameter
-            (void) parameter;    // Unused parameter
-            (void) language;    // Unused parameter
+            (void)targetType;    // Unused parameter
+            (void)parameter;    // Unused parameter
+            (void)language;    // Unused parameter
 
             auto visibility = dynamic_cast<Box<Visibility>^>(value);
             return (visibility != nullptr && visibility->Value != Visibility::Visible);

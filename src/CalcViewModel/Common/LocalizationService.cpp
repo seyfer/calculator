@@ -206,7 +206,7 @@ FontWeight LocalizationService::GetFontWeightOverride()
 double LocalizationService::GetFontScaleFactorOverride(LanguageFontType fontType)
 {
     assert(m_overrideFontApiValues);
-    
+
     switch (fontType)
     {
     case LanguageFontType::UIText:
@@ -271,12 +271,12 @@ void LocalizationService::UpdateFontFamilyAndSize(DependencyObject^ target)
         {
             control->FontSize = sizeToUse;
         }
-        else 
+        else
         {
             control->ClearValue(Control::FontSizeProperty);
         }
     }
-    else 
+    else
     {
         auto textBlock = dynamic_cast<TextBlock^>(target);
         if (textBlock)
@@ -290,7 +290,7 @@ void LocalizationService::UpdateFontFamilyAndSize(DependencyObject^ target)
             {
                 textBlock->FontSize = sizeToUse;
             }
-            else 
+            else
             {
                 textBlock->ClearValue(TextBlock::FontSizeProperty);
             }
@@ -309,7 +309,7 @@ void LocalizationService::UpdateFontFamilyAndSize(DependencyObject^ target)
                 {
                     richTextBlock->FontSize = sizeToUse;
                 }
-                else 
+                else
                 {
                     richTextBlock->ClearValue(RichTextBlock::FontSizeProperty);
                 }
@@ -328,7 +328,7 @@ void LocalizationService::UpdateFontFamilyAndSize(DependencyObject^ target)
                     {
                         textElement->FontSize = sizeToUse;
                     }
-                    else 
+                    else
                     {
                         textElement->ClearValue(TextElement::FontSizeProperty);
                     }

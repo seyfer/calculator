@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -11,7 +11,7 @@ namespace CalculatorApp
     {
         public delegate void SelectedEventHandler(Platform::Object^ sender);
 
-        public ref class CalculationResult sealed: public Windows::UI::Xaml::Controls::Control
+        public ref class CalculationResult sealed : public Windows::UI::Xaml::Controls::Control
         {
         public:
             CalculationResult();

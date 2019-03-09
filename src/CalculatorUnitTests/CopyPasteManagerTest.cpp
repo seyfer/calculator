@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -41,7 +41,7 @@ namespace CalculatorUnitTests
     }\
 }
 
-// returns a iterator from end
+    // returns a iterator from end
 #define START_LOOP(dataSet)\
 {\
     int size = sizeof(dataSet)/sizeof(*dataSet);\
@@ -455,9 +455,9 @@ namespace CalculatorUnitTests
         START_LOOP(input)
             // paste number in standard mode and then validate the pastability of displayed number for other modes
             scvm->OnPaste(input[size], ViewMode::Standard);
-            VERIFY_ARE_EQUAL(ValidateStandardPasteExpression(scvm->DisplayValue), scvm->DisplayValue);
-            VERIFY_ARE_EQUAL(ValidateScientificPasteExpression(scvm->DisplayValue), scvm->DisplayValue);
-            VERIFY_ARE_EQUAL(ValidateProgrammerHexQwordPasteExpression(scvm->DisplayValue), scvm->DisplayValue);
+        VERIFY_ARE_EQUAL(ValidateStandardPasteExpression(scvm->DisplayValue), scvm->DisplayValue);
+        VERIFY_ARE_EQUAL(ValidateScientificPasteExpression(scvm->DisplayValue), scvm->DisplayValue);
+        VERIFY_ARE_EQUAL(ValidateProgrammerHexQwordPasteExpression(scvm->DisplayValue), scvm->DisplayValue);
         END_LOOP
     }
 

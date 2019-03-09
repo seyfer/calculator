@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -96,7 +96,7 @@ void UnitConverterDataLoader::LoadData()
         vector<UCM::Unit> unitList;
 
         // Sort the units by order
-        sort(orderedUnits.begin(), orderedUnits.end(), [](const OrderedUnit& first, const OrderedUnit& second){ return first.order < second.order; });
+        sort(orderedUnits.begin(), orderedUnits.end(), [](const OrderedUnit& first, const OrderedUnit& second) { return first.order < second.order; });
 
         for (OrderedUnit u : orderedUnits)
         {
@@ -182,11 +182,11 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareFoot, GetLocalizedStringName(L"UnitName_SquareFoot"), GetLocalizedStringName(L"UnitAbbreviation_SquareFoot"), 7, useSI, useUSCustomary, false });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareInch, GetLocalizedStringName(L"UnitName_SquareInch"), GetLocalizedStringName(L"UnitAbbreviation_SquareInch"), 6 });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareKilometer, GetLocalizedStringName(L"UnitName_SquareKilometer"), GetLocalizedStringName(L"UnitAbbreviation_SquareKilometer"), 5 });
-    areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareMeter, GetLocalizedStringName(L"UnitName_SquareMeter"), GetLocalizedStringName(L"UnitAbbreviation_SquareMeter"), 3, useUSCustomary, useSI, false});
+    areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareMeter, GetLocalizedStringName(L"UnitName_SquareMeter"), GetLocalizedStringName(L"UnitAbbreviation_SquareMeter"), 3, useUSCustomary, useSI, false });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareMile, GetLocalizedStringName(L"UnitName_SquareMile"), GetLocalizedStringName(L"UnitAbbreviation_SquareMile"), 10 });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareMillimeter, GetLocalizedStringName(L"UnitName_SquareMillimeter"), GetLocalizedStringName(L"UnitAbbreviation_SquareMillimeter"), 1 });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SquareYard, GetLocalizedStringName(L"UnitName_SquareYard"), GetLocalizedStringName(L"UnitAbbreviation_SquareYard"), 8 });
-    areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_Hand, GetLocalizedStringName(L"UnitName_Hand"), GetLocalizedStringName(L"UnitAbbreviation_Hand"), 11, false, false, true});
+    areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_Hand, GetLocalizedStringName(L"UnitName_Hand"), GetLocalizedStringName(L"UnitAbbreviation_Hand"), 11, false, false, true });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_Paper, GetLocalizedStringName(L"UnitName_Paper"), GetLocalizedStringName(L"UnitAbbreviation_Paper"), 12, false, false, true });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_SoccerField, GetLocalizedStringName(L"UnitName_SoccerField"), GetLocalizedStringName(L"UnitAbbreviation_SoccerField"),13, false, false, true });
     areaUnits.push_back(OrderedUnit{ UnitConverterUnits::Area_Castle, GetLocalizedStringName(L"UnitName_Castle"), GetLocalizedStringName(L"UnitAbbreviation_Castle"), 14, false, false, true });
@@ -200,9 +200,9 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Exbibits, GetLocalizedStringName(L"UnitName_Exbibits"), GetLocalizedStringName(L"UnitAbbreviation_Exbibits"), 24 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Exbibytes, GetLocalizedStringName(L"UnitName_Exbibytes"), GetLocalizedStringName(L"UnitAbbreviation_Exbibytes"), 26 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Gibibits, GetLocalizedStringName(L"UnitName_Gibibits"), GetLocalizedStringName(L"UnitAbbreviation_Gibibits"), 12 });
-    dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Gibibytes, GetLocalizedStringName(L"UnitName_Gibibytes"), GetLocalizedStringName(L"UnitAbbreviation_Gibibytes"), 14 }); 
+    dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Gibibytes, GetLocalizedStringName(L"UnitName_Gibibytes"), GetLocalizedStringName(L"UnitAbbreviation_Gibibytes"), 14 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Gigabit, GetLocalizedStringName(L"UnitName_Gigabit"), GetLocalizedStringName(L"UnitAbbreviation_Gigabit"), 11 });
-    dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Gigabyte, GetLocalizedStringName(L"UnitName_Gigabyte"), GetLocalizedStringName(L"UnitAbbreviation_Gigabyte"),13,  true, false, false});
+    dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Gigabyte, GetLocalizedStringName(L"UnitName_Gigabyte"), GetLocalizedStringName(L"UnitAbbreviation_Gigabyte"),13,  true, false, false });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Kibibits, GetLocalizedStringName(L"UnitName_Kibibits"), GetLocalizedStringName(L"UnitAbbreviation_Kibibits"), 4 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Kibibytes, GetLocalizedStringName(L"UnitName_Kibibytes"), GetLocalizedStringName(L"UnitAbbreviation_Kibibytes"),6 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Kilobit, GetLocalizedStringName(L"UnitName_Kilobit"), GetLocalizedStringName(L"UnitAbbreviation_Kilobit"), 3 });
@@ -210,7 +210,7 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Mebibits, GetLocalizedStringName(L"UnitName_Mebibits"), GetLocalizedStringName(L"UnitAbbreviation_Mebibits"), 8 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Mebibytes, GetLocalizedStringName(L"UnitName_Mebibytes"), GetLocalizedStringName(L"UnitAbbreviation_Mebibytes"), 10 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Megabit, GetLocalizedStringName(L"UnitName_Megabit"), GetLocalizedStringName(L"UnitAbbreviation_Megabit"), 7 });
-    dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Megabyte, GetLocalizedStringName(L"UnitName_Megabyte"), GetLocalizedStringName(L"UnitAbbreviation_Megabyte"), 9, false, true, false});
+    dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Megabyte, GetLocalizedStringName(L"UnitName_Megabyte"), GetLocalizedStringName(L"UnitAbbreviation_Megabyte"), 9, false, true, false });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Pebibits, GetLocalizedStringName(L"UnitName_Pebibits"), GetLocalizedStringName(L"UnitAbbreviation_Pebibits"), 20 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Pebibytes, GetLocalizedStringName(L"UnitName_Pebibytes"), GetLocalizedStringName(L"UnitAbbreviation_Pebibytes"), 22 });
     dataUnits.push_back(OrderedUnit{ UnitConverterUnits::Data_Petabit, GetLocalizedStringName(L"UnitName_Petabit"), GetLocalizedStringName(L"UnitAbbreviation_Petabit"), 19 });
@@ -237,7 +237,7 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_Calorie, GetLocalizedStringName(L"UnitName_Calorie"), GetLocalizedStringName(L"UnitAbbreviation_Calorie"), 4 });
     energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_ElectronVolt, GetLocalizedStringName(L"UnitName_Electron-Volt"), GetLocalizedStringName(L"UnitAbbreviation_Electron-Volt"), 1 });
     energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_FootPound, GetLocalizedStringName(L"UnitName_Foot-Pound"), GetLocalizedStringName(L"UnitAbbreviation_Foot-Pound"), 6 });
-    energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_Joule, GetLocalizedStringName(L"UnitName_Joule"), GetLocalizedStringName(L"UnitAbbreviation_Joule"), 2, true, false, false});
+    energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_Joule, GetLocalizedStringName(L"UnitName_Joule"), GetLocalizedStringName(L"UnitAbbreviation_Joule"), 2, true, false, false });
     energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_Kilocalorie, GetLocalizedStringName(L"UnitName_Kilocalorie"), GetLocalizedStringName(L"UnitAbbreviation_Kilocalorie"), 5, false, true, false });
     energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_Kilojoule, GetLocalizedStringName(L"UnitName_Kilojoule"), GetLocalizedStringName(L"UnitAbbreviation_Kilojoule"), 3 });
     energyUnits.push_back(OrderedUnit{ UnitConverterUnits::Energy_Battery, GetLocalizedStringName(L"UnitName_Battery"), GetLocalizedStringName(L"UnitAbbreviation_Battery"), 8, false, false, true });
@@ -246,7 +246,7 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     unitMap.emplace(ViewMode::Energy, energyUnits);
 
     vector<OrderedUnit> lengthUnits;
-    lengthUnits.push_back(OrderedUnit{ UnitConverterUnits::Length_Centimeter, GetLocalizedStringName(L"UnitName_Centimeter"), GetLocalizedStringName(L"UnitAbbreviation_Centimeter"), 4, useUSCustomary, useSI, false});
+    lengthUnits.push_back(OrderedUnit{ UnitConverterUnits::Length_Centimeter, GetLocalizedStringName(L"UnitName_Centimeter"), GetLocalizedStringName(L"UnitAbbreviation_Centimeter"), 4, useUSCustomary, useSI, false });
     lengthUnits.push_back(OrderedUnit{ UnitConverterUnits::Length_Foot, GetLocalizedStringName(L"UnitName_Foot"), GetLocalizedStringName(L"UnitAbbreviation_Foot"), 8 });
     lengthUnits.push_back(OrderedUnit{ UnitConverterUnits::Length_Inch, GetLocalizedStringName(L"UnitName_Inch"), GetLocalizedStringName(L"UnitAbbreviation_Inch"), 7 , useSI, useUSCustomary, false });
     lengthUnits.push_back(OrderedUnit{ UnitConverterUnits::Length_Kilometer, GetLocalizedStringName(L"UnitName_Kilometer"), GetLocalizedStringName(L"UnitAbbreviation_Kilometer"), 6 });
@@ -266,10 +266,10 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_BritishThermalUnitPerMinute, GetLocalizedStringName(L"UnitName_BTUPerMinute"), GetLocalizedStringName(L"UnitAbbreviation_BTUPerMinute"), 5 });
     powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_FootPoundPerMinute, GetLocalizedStringName(L"UnitName_Foot-PoundPerMinute"), GetLocalizedStringName(L"UnitAbbreviation_Foot-PoundPerMinute"), 4 });
     powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Horsepower, GetLocalizedStringName(L"UnitName_Horsepower"), GetLocalizedStringName(L"UnitAbbreviation_Horsepower") , 3 , false, true, false });
-    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Kilowatt, GetLocalizedStringName(L"UnitName_Kilowatt"), GetLocalizedStringName(L"UnitAbbreviation_Kilowatt"), 2 , !useWattInsteadOfKilowatt});
-    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Watt, GetLocalizedStringName(L"UnitName_Watt"), GetLocalizedStringName(L"UnitAbbreviation_Watt"), 1, useWattInsteadOfKilowatt});
-    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_LightBulb, GetLocalizedStringName(L"UnitName_LightBulb"), GetLocalizedStringName(L"UnitAbbreviation_LightBulb"), 6 ,false, false, true});
-    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Horse, GetLocalizedStringName(L"UnitName_Horse"), GetLocalizedStringName(L"UnitAbbreviation_Horse"), 7 ,false, false, true});
+    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Kilowatt, GetLocalizedStringName(L"UnitName_Kilowatt"), GetLocalizedStringName(L"UnitAbbreviation_Kilowatt"), 2 , !useWattInsteadOfKilowatt });
+    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Watt, GetLocalizedStringName(L"UnitName_Watt"), GetLocalizedStringName(L"UnitAbbreviation_Watt"), 1, useWattInsteadOfKilowatt });
+    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_LightBulb, GetLocalizedStringName(L"UnitName_LightBulb"), GetLocalizedStringName(L"UnitAbbreviation_LightBulb"), 6 ,false, false, true });
+    powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_Horse, GetLocalizedStringName(L"UnitName_Horse"), GetLocalizedStringName(L"UnitAbbreviation_Horse"), 7 ,false, false, true });
     powerUnits.push_back(OrderedUnit{ UnitConverterUnits::Power_TrainEngine, GetLocalizedStringName(L"UnitName_TrainEngine"), GetLocalizedStringName(L"UnitAbbreviation_TrainEngine"), 8 ,false, false, true });
     unitMap.emplace(ViewMode::Power, powerUnits);
 
@@ -315,17 +315,17 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_GallonUK, GetLocalizedStringName(L"UnitName_GallonUK"), GetLocalizedStringName(L"UnitAbbreviation_GallonUK"), 20 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_GallonUS, GetLocalizedStringName(L"UnitName_GallonUS"), GetLocalizedStringName(L"UnitAbbreviation_GallonUS"), 11 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_Liter, GetLocalizedStringName(L"UnitName_Liter"), GetLocalizedStringName(L"UnitAbbreviation_Liter"), 3 });
-    volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_Milliliter, GetLocalizedStringName(L"UnitName_Milliliter"), GetLocalizedStringName(L"UnitAbbreviation_Milliliter"), 1, useUSCustomary, useSI});
+    volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_Milliliter, GetLocalizedStringName(L"UnitName_Milliliter"), GetLocalizedStringName(L"UnitAbbreviation_Milliliter"), 1, useUSCustomary, useSI });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_PintUK, GetLocalizedStringName(L"UnitName_PintUK"), GetLocalizedStringName(L"UnitAbbreviation_PintUK"), 18 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_PintUS, GetLocalizedStringName(L"UnitName_PintUS"), GetLocalizedStringName(L"UnitAbbreviation_PintUS"), 9 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_TablespoonUS, GetLocalizedStringName(L"UnitName_TablespoonUS"), GetLocalizedStringName(L"UnitAbbreviation_TablespoonUS"), 6 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_TeaspoonUS, GetLocalizedStringName(L"UnitName_TeaspoonUS"), GetLocalizedStringName(L"UnitAbbreviation_TeaspoonUS"), 5, useSI, useUSCustomary && m_currentRegionCode != "GB" });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_QuartUK, GetLocalizedStringName(L"UnitName_QuartUK"), GetLocalizedStringName(L"UnitAbbreviation_QuartUK"), 19 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_QuartUS, GetLocalizedStringName(L"UnitName_QuartUS"), GetLocalizedStringName(L"UnitAbbreviation_QuartUS"), 10 });
-    volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_TeaspoonUK, GetLocalizedStringName(L"UnitName_TeaspoonUK"), GetLocalizedStringName(L"UnitAbbreviation_TeaspoonUK"), 15, false, useUSCustomary && m_currentRegionCode == "GB"});
+    volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_TeaspoonUK, GetLocalizedStringName(L"UnitName_TeaspoonUK"), GetLocalizedStringName(L"UnitAbbreviation_TeaspoonUK"), 15, false, useUSCustomary && m_currentRegionCode == "GB" });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_TablespoonUK, GetLocalizedStringName(L"UnitName_TablespoonUK"), GetLocalizedStringName(L"UnitAbbreviation_TablespoonUK"), 16 });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_CoffeeCup, GetLocalizedStringName(L"UnitName_CoffeeCup"), GetLocalizedStringName(L"UnitAbbreviation_CoffeeCup"), 22 ,false, false, true });
-    volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_Bathtub, GetLocalizedStringName(L"UnitName_Bathtub"), GetLocalizedStringName(L"UnitAbbreviation_Bathtub"), 23 ,false, false, true});
+    volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_Bathtub, GetLocalizedStringName(L"UnitName_Bathtub"), GetLocalizedStringName(L"UnitAbbreviation_Bathtub"), 23 ,false, false, true });
     volumeUnits.push_back(OrderedUnit{ UnitConverterUnits::Volume_SwimmingPool, GetLocalizedStringName(L"UnitName_SwimmingPool"), GetLocalizedStringName(L"UnitAbbreviation_SwimmingPool"), 24 ,false, false, true });
     unitMap.emplace(ViewMode::Volume, volumeUnits);
 
@@ -336,7 +336,7 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Decagram, GetLocalizedStringName(L"UnitName_Decagram"), GetLocalizedStringName(L"UnitAbbreviation_Decagram"), 6 });
     weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Gram, GetLocalizedStringName(L"UnitName_Gram"), GetLocalizedStringName(L"UnitAbbreviation_Gram"), 5 });
     weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Hectogram, GetLocalizedStringName(L"UnitName_Hectogram"), GetLocalizedStringName(L"UnitAbbreviation_Hectogram"), 7 });
-    weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Kilogram, GetLocalizedStringName(L"UnitName_Kilogram"), GetLocalizedStringName(L"UnitAbbreviation_Kilogram"), 8 , useUSCustomary, useSI});
+    weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Kilogram, GetLocalizedStringName(L"UnitName_Kilogram"), GetLocalizedStringName(L"UnitAbbreviation_Kilogram"), 8 , useUSCustomary, useSI });
     weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_LongTon, GetLocalizedStringName(L"UnitName_LongTon"), GetLocalizedStringName(L"UnitAbbreviation_LongTon"), 14 });
     weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Milligram, GetLocalizedStringName(L"UnitName_Milligram"), GetLocalizedStringName(L"UnitAbbreviation_Milligram"), 2 });
     weightUnits.push_back(OrderedUnit{ UnitConverterUnits::Weight_Ounce, GetLocalizedStringName(L"UnitName_Ounce"), GetLocalizedStringName(L"UnitAbbreviation_Ounce"), 10 });
@@ -352,7 +352,7 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
 
     vector<OrderedUnit> pressureUnits;
     pressureUnits.push_back(OrderedUnit{ UnitConverterUnits::Pressure_Atmosphere, GetLocalizedStringName(L"UnitName_Atmosphere"), GetLocalizedStringName(L"UnitAbbreviation_Atmosphere"), 1 , true, false, false });
-    pressureUnits.push_back(OrderedUnit{ UnitConverterUnits::Pressure_Bar, GetLocalizedStringName(L"UnitName_Bar"), GetLocalizedStringName(L"UnitAbbreviation_Bar"), 2, false, true, false});
+    pressureUnits.push_back(OrderedUnit{ UnitConverterUnits::Pressure_Bar, GetLocalizedStringName(L"UnitName_Bar"), GetLocalizedStringName(L"UnitAbbreviation_Bar"), 2, false, true, false });
     pressureUnits.push_back(OrderedUnit{ UnitConverterUnits::Pressure_KiloPascal, GetLocalizedStringName(L"UnitName_KiloPascal"), GetLocalizedStringName(L"UnitAbbreviation_KiloPascal"), 3 });
     pressureUnits.push_back(OrderedUnit{ UnitConverterUnits::Pressure_MillimeterOfMercury, GetLocalizedStringName(L"UnitName_MillimeterOfMercury "), GetLocalizedStringName(L"UnitAbbreviation_MillimeterOfMercury "), 4 });
     pressureUnits.push_back(OrderedUnit{ UnitConverterUnits::Pressure_Pascal, GetLocalizedStringName(L"UnitName_Pascal"), GetLocalizedStringName(L"UnitAbbreviation_Pascal"), 5 });
@@ -362,7 +362,7 @@ void UnitConverterDataLoader::GetUnits(_In_ unordered_map<ViewMode, vector<Order
     vector<OrderedUnit> angleUnits;
     angleUnits.push_back(OrderedUnit{ UnitConverterUnits::Angle_Degree, GetLocalizedStringName(L"UnitName_Degree"), GetLocalizedStringName(L"UnitAbbreviation_Degree"), 1, true, false, false });
     angleUnits.push_back(OrderedUnit{ UnitConverterUnits::Angle_Radian, GetLocalizedStringName(L"UnitName_Radian"), GetLocalizedStringName(L"UnitAbbreviation_Radian"), 2, false, true, false });
-    angleUnits.push_back(OrderedUnit{ UnitConverterUnits::Angle_Gradian, GetLocalizedStringName(L"UnitName_Gradian"), GetLocalizedStringName(L"UnitAbbreviation_Gradian"), 3});
+    angleUnits.push_back(OrderedUnit{ UnitConverterUnits::Angle_Gradian, GetLocalizedStringName(L"UnitName_Gradian"), GetLocalizedStringName(L"UnitAbbreviation_Gradian"), 3 });
     unitMap.emplace(ViewMode::Angle, angleUnits);
 }
 
@@ -547,40 +547,40 @@ void UnitConverterDataLoader::GetConversionData(_In_ unordered_map<ViewMode, uno
             categoryToUnitConversionMap.at(unitdata.categoryId).insert(pair<int, double>(unitdata.unitId, unitdata.factor));
         }
     }
- }
+}
 
- wstring UnitConverterDataLoader::GetLocalizedStringName(String^ stringId)
- {
-     return AppResourceProvider::GetInstance().GetResourceString(stringId)->Data();
- }
+wstring UnitConverterDataLoader::GetLocalizedStringName(String^ stringId)
+{
+    return AppResourceProvider::GetInstance().GetResourceString(stringId)->Data();
+}
 
- void UnitConverterDataLoader::GetExplicitConversionData(_In_ unordered_map<int, unordered_map<int, UCM::ConversionData>>& unitToUnitConversionList)
- {
-     /* categoryId, ParentUnitId, UnitId, ratio, offset, offsetfirst*/
-     ExplicitUnitConversionData conversionDataList[] = {
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesCelsius, UnitConverterUnits::Temperature_DegreesCelsius , 1, 0 },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesCelsius, UnitConverterUnits::Temperature_DegreesFahrenheit, 1.8, 32 },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesCelsius, UnitConverterUnits::Temperature_Kelvin, 1, 273.15 },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesFahrenheit, UnitConverterUnits::Temperature_DegreesCelsius, 0.55555555555555555555555555555556, -32, CONVERT_WITH_OFFSET_FIRST },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesFahrenheit, UnitConverterUnits::Temperature_DegreesFahrenheit, 1, 0 },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesFahrenheit, UnitConverterUnits::Temperature_Kelvin, 0.55555555555555555555555555555556, 459.67, CONVERT_WITH_OFFSET_FIRST },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_Kelvin, UnitConverterUnits::Temperature_DegreesCelsius, 1, -273.15, CONVERT_WITH_OFFSET_FIRST },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_Kelvin, UnitConverterUnits::Temperature_DegreesFahrenheit, 1.8, -459.67 },
-         { ViewMode::Temperature, UnitConverterUnits::Temperature_Kelvin, UnitConverterUnits::Temperature_Kelvin, 1, 0 }
-     };
+void UnitConverterDataLoader::GetExplicitConversionData(_In_ unordered_map<int, unordered_map<int, UCM::ConversionData>>& unitToUnitConversionList)
+{
+    /* categoryId, ParentUnitId, UnitId, ratio, offset, offsetfirst*/
+    ExplicitUnitConversionData conversionDataList[] = {
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesCelsius, UnitConverterUnits::Temperature_DegreesCelsius , 1, 0 },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesCelsius, UnitConverterUnits::Temperature_DegreesFahrenheit, 1.8, 32 },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesCelsius, UnitConverterUnits::Temperature_Kelvin, 1, 273.15 },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesFahrenheit, UnitConverterUnits::Temperature_DegreesCelsius, 0.55555555555555555555555555555556, -32, CONVERT_WITH_OFFSET_FIRST },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesFahrenheit, UnitConverterUnits::Temperature_DegreesFahrenheit, 1, 0 },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_DegreesFahrenheit, UnitConverterUnits::Temperature_Kelvin, 0.55555555555555555555555555555556, 459.67, CONVERT_WITH_OFFSET_FIRST },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_Kelvin, UnitConverterUnits::Temperature_DegreesCelsius, 1, -273.15, CONVERT_WITH_OFFSET_FIRST },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_Kelvin, UnitConverterUnits::Temperature_DegreesFahrenheit, 1.8, -459.67 },
+        { ViewMode::Temperature, UnitConverterUnits::Temperature_Kelvin, UnitConverterUnits::Temperature_Kelvin, 1, 0 }
+    };
 
-     // Populate the hash map and return;
-     for (ExplicitUnitConversionData data : conversionDataList)
-     {
-         if (unitToUnitConversionList.find(data.parentUnitId) == unitToUnitConversionList.end())
-         {
-             unordered_map<int, UCM::ConversionData> conversionData;
-             conversionData.insert(pair<int, UCM::ConversionData>(data.unitId, static_cast<UCM::ConversionData>(data)));
-             unitToUnitConversionList.insert(pair<int, unordered_map<int, UCM::ConversionData>>(data.parentUnitId, conversionData));
-         }
-         else
-         {
-             unitToUnitConversionList.at(data.parentUnitId).insert(pair<int, UCM::ConversionData>(data.unitId, static_cast<UCM::ConversionData>(data)));
-         }
-     }
- }
+    // Populate the hash map and return;
+    for (ExplicitUnitConversionData data : conversionDataList)
+    {
+        if (unitToUnitConversionList.find(data.parentUnitId) == unitToUnitConversionList.end())
+        {
+            unordered_map<int, UCM::ConversionData> conversionData;
+            conversionData.insert(pair<int, UCM::ConversionData>(data.unitId, static_cast<UCM::ConversionData>(data)));
+            unitToUnitConversionList.insert(pair<int, unordered_map<int, UCM::ConversionData>>(data.parentUnitId, conversionData));
+        }
+        else
+        {
+            unitToUnitConversionList.at(data.parentUnitId).insert(pair<int, UCM::ConversionData>(data.unitId, static_cast<UCM::ConversionData>(data)));
+        }
+    }
+}

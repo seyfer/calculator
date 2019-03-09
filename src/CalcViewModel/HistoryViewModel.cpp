@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -64,13 +64,13 @@ void HistoryViewModel::ReloadHistory(_In_ ViewMode currentMode)
     if (historyListModel.size() > 0)
     {
         for (auto ritr = historyListModel.rbegin(); ritr != historyListModel.rend(); ++ritr)
-        { 
+        {
             wstring expression = (*ritr)->historyItemVector.expression;
             wstring result = (*ritr)->historyItemVector.result;
             localizer.LocalizeDisplayValue(&expression);
             localizer.LocalizeDisplayValue(&result);
 
-            auto item = ref new HistoryItemViewModel(ref new Platform::String( expression.c_str()),
+            auto item = ref new HistoryItemViewModel(ref new Platform::String(expression.c_str()),
                 ref new Platform::String(result.c_str()),
                 (*ritr)->historyItemVector.spTokens, (*ritr)->historyItemVector.spCommands);
             historyListVM->Append(item);
@@ -90,14 +90,14 @@ void HistoryViewModel::OnHistoryItemAdded(_In_ unsigned int addedItemIndex)
     localizer.LocalizeDisplayValue(&expression);
     localizer.LocalizeDisplayValue(&result);
     auto item = ref new HistoryItemViewModel(ref new Platform::String(expression.c_str()),
-    ref new Platform::String(result.c_str()),
-    newItem->historyItemVector.spTokens, newItem->historyItemVector.spCommands );
+        ref new Platform::String(result.c_str()),
+        newItem->historyItemVector.spTokens, newItem->historyItemVector.spCommands);
 
     // check if we have not hit the max items
     if (Items->Size >= m_calculatorManager->MaxHistorySize())
     {
         // this means the item already exists
-        Items->RemoveAt(Items->Size -1);
+        Items->RemoveAt(Items->Size - 1);
     }
 
     assert(addedItemIndex <= m_calculatorManager->MaxHistorySize() && addedItemIndex >= 0);

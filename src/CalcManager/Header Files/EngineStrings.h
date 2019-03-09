@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 /****************************Module*Header***********************************
@@ -214,7 +214,7 @@
 #define SIDS_ERR_INPUT_OVERFLOW L"119"
 #define SIDS_ERR_OUTPUT_OVERFLOW L"120"
 
-__declspec(selectany) std::wstring g_sids[] = 
+__declspec(selectany) std::wstring g_sids[] =
 {
     std::wstring(SIDS_PLUS_MINUS),
     std::wstring(SIDS_C),
@@ -252,7 +252,7 @@ __declspec(selectany) std::wstring g_sids[] =
     std::wstring(SIDS_NFACTORIAL),
     std::wstring(SIDS_RECIPROCAL),
     std::wstring(SIDS_DMS),
-    std::wstring(SIDS_CUBEROOT),    
+    std::wstring(SIDS_CUBEROOT),
     std::wstring(SIDS_POWTEN),
     std::wstring(SIDS_PERCENT),
     std::wstring(SIDS_SCIENTIFIC_NOTATION),
@@ -324,7 +324,7 @@ __declspec(selectany) std::wstring g_sids[] =
     std::wstring(SIDS_NOMEM),
     std::wstring(SIDS_TOOMANY),
     std::wstring(SIDS_OVERFLOW),
-    std::wstring(SIDS_NORESULT), 
+    std::wstring(SIDS_NORESULT),
     std::wstring(SIDS_INSUFFICIENT_DATA),
     std::wstring(SIDS_ERR_UNK_CH),
     std::wstring(SIDS_ERR_UNK_FN),

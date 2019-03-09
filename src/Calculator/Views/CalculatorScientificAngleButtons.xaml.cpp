@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 //
@@ -40,7 +40,7 @@ void CalculatorScientificAngleButtons::HypButton_Toggled(_In_ Object^ sender, _I
     TraceLogger::GetInstance().LogHypButtonUsed(ApplicationView::GetApplicationViewIdForWindow(CoreWindow::GetForCurrentThread()));
 }
 
-void CalculatorScientificAngleButtons::FToEButton_Toggled(_In_ Object^ sender,_In_ RoutedEventArgs^ e)
+void CalculatorScientificAngleButtons::FToEButton_Toggled(_In_ Object^ sender, _In_ RoutedEventArgs^ e)
 {
     auto viewModel = safe_cast<StandardCalculatorViewModel^>(this->DataContext);
     viewModel->FtoEButtonToggled();

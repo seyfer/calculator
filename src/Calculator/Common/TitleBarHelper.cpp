@@ -66,7 +66,7 @@ void TitleBarHelper::RegisterForLayoutChanged()
 {
     m_layoutChangedToken =
         m_coreTitleBar->LayoutMetricsChanged += ref new TypedEventHandler<CoreApplicationViewTitleBar^, Object^>(
-        [this](CoreApplicationViewTitleBar^ cTitleBar, Object^)
+            [this](CoreApplicationViewTitleBar^ cTitleBar, Object^)
     {
         // Update title bar control size as needed to account for system size changes
         SetTitleBarHeight(cTitleBar->Height);
@@ -77,7 +77,7 @@ void TitleBarHelper::RegisterForVisibilityChanged()
 {
     m_visibilityChangedToken =
         m_coreTitleBar->IsVisibleChanged += ref new TypedEventHandler<CoreApplicationViewTitleBar^, Object^>(
-        [this](CoreApplicationViewTitleBar^ cTitleBar, Object^)
+            [this](CoreApplicationViewTitleBar^ cTitleBar, Object^)
     {
         // Update title bar visibility
         SetTitleBarVisibility(cTitleBar->IsVisible);

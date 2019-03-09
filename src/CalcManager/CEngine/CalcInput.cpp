@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -124,7 +124,7 @@ bool CalcInput::TryAddDigit(unsigned int value, uint32_t radix, bool isIntegerMo
         else if (radix == 10)
         {
             // If value length is at least the max, we know we can't add another digit.
-            if(pNumSec->value.size() < maxNumStr.size())
+            if (pNumSec->value.size() < maxNumStr.size())
             {
                 // Compare value to substring of maxNumStr of value.size() length.
                 // If cmpResult > 0:

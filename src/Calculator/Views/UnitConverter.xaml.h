@@ -79,7 +79,7 @@ namespace CalculatorApp
         Windows::UI::Xaml::FlowDirection m_layoutDirection;
         Windows::Foundation::EventRegistrationToken m_propertyChangedToken;
         Windows::UI::Xaml::Controls::MenuFlyout^ m_resultsFlyout;
-        
+
         Platform::String^ m_chargesMayApplyText;
         Platform::String^ m_failedToRefreshText;
 

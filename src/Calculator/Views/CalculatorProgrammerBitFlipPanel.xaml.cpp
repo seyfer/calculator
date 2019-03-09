@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 //
@@ -83,16 +83,16 @@ void CalculatorProgrammerBitFlipPanel::AssignFlipButtons()
 {
     assert(m_flipButtons.size() == 64);
 
-    m_flipButtons[0]  = this->Bit0;
-    m_flipButtons[1]  = this->Bit1;
-    m_flipButtons[2]  = this->Bit2;
-    m_flipButtons[3]  = this->Bit3;
-    m_flipButtons[4]  = this->Bit4;
-    m_flipButtons[5]  = this->Bit5;
-    m_flipButtons[6]  = this->Bit6;
-    m_flipButtons[7]  = this->Bit7;
-    m_flipButtons[8]  = this->Bit8;
-    m_flipButtons[9]  = this->Bit9;
+    m_flipButtons[0] = this->Bit0;
+    m_flipButtons[1] = this->Bit1;
+    m_flipButtons[2] = this->Bit2;
+    m_flipButtons[3] = this->Bit3;
+    m_flipButtons[4] = this->Bit4;
+    m_flipButtons[5] = this->Bit5;
+    m_flipButtons[6] = this->Bit6;
+    m_flipButtons[7] = this->Bit7;
+    m_flipButtons[8] = this->Bit8;
+    m_flipButtons[9] = this->Bit9;
     m_flipButtons[10] = this->Bit10;
     m_flipButtons[11] = this->Bit11;
     m_flipButtons[12] = this->Bit12;

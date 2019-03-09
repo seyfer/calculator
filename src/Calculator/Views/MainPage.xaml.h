@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -26,7 +26,7 @@ namespace CalculatorApp
         MainPage();
         property CalculatorApp::ViewModel::ApplicationViewModel^ Model
         {
-            CalculatorApp::ViewModel::ApplicationViewModel^ get(){
+            CalculatorApp::ViewModel::ApplicationViewModel^ get() {
                 return m_model;
             }
         }
@@ -59,10 +59,10 @@ namespace CalculatorApp
 
         Microsoft::UI::Xaml::Controls::NavigationViewItemHeader^ CreateNavViewHeaderFromGroup(CalculatorApp::Common::NavCategoryGroup^ group);
         Microsoft::UI::Xaml::Controls::NavigationViewItem^ CreateNavViewItemFromCategory(CalculatorApp::Common::NavCategory^ category);
-        
+
         Windows::Foundation::EventRegistrationToken m_fullscreenFlyoutClosedToken;
         void OnFullscreenFlyoutClosed();
-        
+
         void ShowHideControls(CalculatorApp::Common::ViewMode mode);
         void UpdateViewState();
         void UpdatePanelViewState();

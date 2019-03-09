@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -49,14 +49,14 @@ static const array<wregex, 2> scientificModePatterns =
 };
 static const array<array<wregex, 5>, 4> programmerModePatterns =
 { {
-    // Hex numbers like 5F, 4A0C, 0xa9, 0xFFull, 47CDh
-    {
-        wregex(c_wspcLParens + L"(0[xX])?" + c_hexProgrammerChars + c_uIntSuffixes + c_wspcRParens),
-        wregex(c_wspcLParens + c_hexProgrammerChars + L"[hH]?" + c_wspcRParens)
-    },
+        // Hex numbers like 5F, 4A0C, 0xa9, 0xFFull, 47CDh
+        {
+            wregex(c_wspcLParens + L"(0[xX])?" + c_hexProgrammerChars + c_uIntSuffixes + c_wspcRParens),
+            wregex(c_wspcLParens + c_hexProgrammerChars + L"[hH]?" + c_wspcRParens)
+        },
     // Decimal numbers like -145, 145, 0n145, 123ull etc
     {
-        wregex(c_wspcLParens + L"[-+]?" + c_decProgrammerChars + L"[lL]{0,2}" +c_wspcRParens),
+        wregex(c_wspcLParens + L"[-+]?" + c_decProgrammerChars + L"[lL]{0,2}" + c_wspcRParens),
         wregex(c_wspcLParens + L"(0[nN])?" + c_decProgrammerChars + c_uIntSuffixes + c_wspcRParens)
     },
     // Octal numbers like 06, 010, 0t77, 0o77, 077ull etc

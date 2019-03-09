@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -95,7 +95,7 @@ namespace UnitConverterUnitTests
             m_ratioMaps[u3] = unit3Map;
             m_ratioMaps[u4] = unit4Map;
         }
-            
+
         void LoadData()
         {
             m_loadDataCallCount++;
@@ -105,12 +105,12 @@ namespace UnitConverterUnitTests
         {
             return m_categories;
         }
-            
+
         vector<Unit> LoadOrderedUnits(const Category& c)
         {
             return m_units[c];
         }
-            
+
         unordered_map<Unit, ConversionData, UnitHash> LoadOrderedRatios(const Unit& u)
         {
             return m_ratioMaps[u];
@@ -500,7 +500,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::One,
             Command::Two
-        });
+            });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 
@@ -528,7 +528,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::One,
             Command::One
-        });
+            });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 
@@ -556,7 +556,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::Two,
             Command::Decimal
-        });
+            });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 
@@ -583,7 +583,7 @@ namespace UnitConverterUnitTests
             Command::One,
             Command::One,
             Command::Two
-        });
+            });
 
         VERIFY_ARE_EQUAL(0, s_testVMCallback->GetMaxDigitsReachedCallCount());
 

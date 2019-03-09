@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -127,7 +127,7 @@ namespace CalculatorApp
             property Windows::Foundation::DateTime DateResult
             {
                 Windows::Foundation::DateTime get() { return m_dateResult; }
-                void set(Windows::Foundation::DateTime value) { m_dateResult = value; UpdateDisplayResult();}
+                void set(Windows::Foundation::DateTime value) { m_dateResult = value; UpdateDisplayResult(); }
             }
 
         private:

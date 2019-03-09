@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -30,56 +30,56 @@ namespace CalculatorApp
     static reader_writer_lock s_traceLoggerLock;
 
     // Telemetry events. Uploaded to asimov.
-    constexpr auto EVENT_NAME_DEBUG                                                     = L"Debug";
-    constexpr auto EVENT_NAME_ERROR                                                     = L"ErrorMessage";
-    constexpr auto EVENT_NAME_APP_PRELAUNCHED_BY_SYSTEM                                 = L"AppPrelaunchedBySystem";
-    constexpr auto EVENT_NAME_PRELAUNCHED_APP_ACTIVATED_BY_USER                         = L"PrelaunchedAppActivatedByUser";
-    constexpr auto EVENT_NAME_APP_LAUNCH_BEGIN                                          = L"AppLaunchBegin";
-    constexpr auto EVENT_NAME_APP_LAUNCH_END                                            = L"AppLaunchEnd";
-    constexpr auto EVENT_NAME_APP_RESUME_END                                            = L"AppResumeEnd";
-    constexpr auto EVENT_NAME_PREVIOUS_STATE_WINDOW_ON_CREATION                         = L"PreviousStateOnWindowCreation";
-    constexpr auto EVENT_NAME_SIZE_ON_SUSPENSION                                        = L"CalculatorSizeOnSuspension";
-    constexpr auto EVENT_NAME_CALCULATOR_VIEWED_IN_SESSION                              = L"CalculatorViewedInSession";
-    constexpr auto EVENT_NAME_DATE_CALCULATOR_VIEWED_IN_SESSION                         = L"DateCalculatorViewedInSession";
-    constexpr auto EVENT_NAME_CONVERTER_VIEWED_IN_SESSION                               = L"ConverterViewedInSession";
-    constexpr auto EVENT_NAME_MODE_CHANGE_BEGIN                                         = L"ModeChangeBegin";
-    constexpr auto EVENT_NAME_MODE_CHANGE_END                                           = L"ModeChangeEnd";
-    constexpr auto EVENT_NAME_HISTORY_BODY_OPENED                                       = L"HistoryBodyOpened";
-    constexpr auto EVENT_NAME_HISTORY_ITEM_LOAD_BEGIN                                   = L"HistoryItemLoadBegin";
-    constexpr auto EVENT_NAME_HISTORY_ITEM_LOAD_END                                     = L"HistoryItemLoadEnd";
-    constexpr auto EVENT_NAME_HISTORY_FLYOUT_OPEN_BEGIN                                 = L"HistoryFlyoutOpenBegin";
-    constexpr auto EVENT_NAME_HISTORY_FLYOUT_OPEN_END                                   = L"HistoryFlyoutOpenEnd";
-    constexpr auto EVENT_NAME_NEW_WINDOW_CREATION_BEGIN                                 = L"NewWindowCreationBegin";
-    constexpr auto EVENT_NAME_NEW_WINDOW_CREATION_END                                   = L"NewWindowCreationEnd";
-    constexpr auto EVENT_NAME_HISTORY_CLEAR                                             = L"HistoryClearBegin";
-    constexpr auto EVENT_NAME_MULTIPLE_MEMORY_USED                                      = L"MultipleMemoryUsed";
-    constexpr auto EVENT_NAME_SINGLE_MEMORY_USED                                        = L"SingleMemoryUsed";
-    constexpr auto EVENT_NAME_SHARED_MEMORY_USED                                        = L"SharedMemoryUsed";
-    constexpr auto EVENT_NAME_MEMORY_BODY_OPENED                                        = L"MemoryBodyOpened";
-    constexpr auto EVENT_NAME_MEMORY_FLYOUT_OPEN_BEGIN                                  = L"MemoryFlyoutOpenBegin";
-    constexpr auto EVENT_NAME_MEMORY_FLYOUT_OPEN_END                                    = L"MemoryFlyoutOpenEnd";
-    constexpr auto EVENT_NAME_MEMORY_CLEAR_ALL                                          = L"MemoryClearAll";
-    constexpr auto EVENT_NAME_INVALID_INPUT_PASTED                                      = L"InvalidInputPasted";
-    constexpr auto EVENT_NAME_VALID_INPUT_PASTED                                        = L"ValidInputPasted";
-    constexpr auto EVENT_NAME_BITFLIP_PANE_CLICKED                                      = L"BitFlipPaneClicked";
-    constexpr auto EVENT_NAME_BITFLIP_BUTTONS_USED                                      = L"BitFlipToggleButtonUsed";
-    constexpr auto EVENT_NAME_ANGLE_BUTTONS_USED                                        = L"AngleButtonUsedInSession";
-    constexpr auto EVENT_NAME_HYP_BUTTON_USED                                           = L"HypButtonUsedInSession";
-    constexpr auto EVENT_NAME_FUNCTION_USAGE                                            = L"FunctionUsageInSession";
-    constexpr auto EVENT_NAME_BITLENGTH_BUTTON_USED                                     = L"BitLengthButtonUsed";
-    constexpr auto EVENT_NAME_RADIX_BUTTON_USED                                         = L"RadixButtonUsed";
-    constexpr auto EVENT_NAME_MAX_WINDOW_COUNT                                          = L"MaxWindowCountInSession";
-    constexpr auto EVENT_NAME_WINDOW_LAUNCHED_PROTOCOL                                  = L"WindowActivatedThroughProtocol";
-    constexpr auto EVENT_NAME_WINDOW_LAUNCHED_TILESEARCH                                = L"WindowLaunchedThroughTile";
-    constexpr auto EVENT_NAME_DATE_DIFFERENCE_USED                                      = L"DateDifferenceModeUsed";
-    constexpr auto EVENT_NAME_DATE_ADD_SUBTRACT_USED                                    = L"DateAddSubtractModeUsed";
-    constexpr auto EVENT_NAME_DATE_DIFFERENCE_FOUND                                     = L"DateDifferenceFound";
-    constexpr auto EVENT_NAME_HIDE_IF_SHOWN                                             = L"HideIfShown";
-    constexpr auto EVENT_NAME_ABOUT_FLYOUT_OPENED                                       = L"AboutFlyoutOpened";
-    constexpr auto EVENT_NAME_NAV_BAR_OPENED                                            = L"NavBarOpened";
-    constexpr auto EVENT_NAME_CORE_WINDOW_WAS_NULL                                      = L"CoreWindowWasNull";
+    constexpr auto EVENT_NAME_DEBUG = L"Debug";
+    constexpr auto EVENT_NAME_ERROR = L"ErrorMessage";
+    constexpr auto EVENT_NAME_APP_PRELAUNCHED_BY_SYSTEM = L"AppPrelaunchedBySystem";
+    constexpr auto EVENT_NAME_PRELAUNCHED_APP_ACTIVATED_BY_USER = L"PrelaunchedAppActivatedByUser";
+    constexpr auto EVENT_NAME_APP_LAUNCH_BEGIN = L"AppLaunchBegin";
+    constexpr auto EVENT_NAME_APP_LAUNCH_END = L"AppLaunchEnd";
+    constexpr auto EVENT_NAME_APP_RESUME_END = L"AppResumeEnd";
+    constexpr auto EVENT_NAME_PREVIOUS_STATE_WINDOW_ON_CREATION = L"PreviousStateOnWindowCreation";
+    constexpr auto EVENT_NAME_SIZE_ON_SUSPENSION = L"CalculatorSizeOnSuspension";
+    constexpr auto EVENT_NAME_CALCULATOR_VIEWED_IN_SESSION = L"CalculatorViewedInSession";
+    constexpr auto EVENT_NAME_DATE_CALCULATOR_VIEWED_IN_SESSION = L"DateCalculatorViewedInSession";
+    constexpr auto EVENT_NAME_CONVERTER_VIEWED_IN_SESSION = L"ConverterViewedInSession";
+    constexpr auto EVENT_NAME_MODE_CHANGE_BEGIN = L"ModeChangeBegin";
+    constexpr auto EVENT_NAME_MODE_CHANGE_END = L"ModeChangeEnd";
+    constexpr auto EVENT_NAME_HISTORY_BODY_OPENED = L"HistoryBodyOpened";
+    constexpr auto EVENT_NAME_HISTORY_ITEM_LOAD_BEGIN = L"HistoryItemLoadBegin";
+    constexpr auto EVENT_NAME_HISTORY_ITEM_LOAD_END = L"HistoryItemLoadEnd";
+    constexpr auto EVENT_NAME_HISTORY_FLYOUT_OPEN_BEGIN = L"HistoryFlyoutOpenBegin";
+    constexpr auto EVENT_NAME_HISTORY_FLYOUT_OPEN_END = L"HistoryFlyoutOpenEnd";
+    constexpr auto EVENT_NAME_NEW_WINDOW_CREATION_BEGIN = L"NewWindowCreationBegin";
+    constexpr auto EVENT_NAME_NEW_WINDOW_CREATION_END = L"NewWindowCreationEnd";
+    constexpr auto EVENT_NAME_HISTORY_CLEAR = L"HistoryClearBegin";
+    constexpr auto EVENT_NAME_MULTIPLE_MEMORY_USED = L"MultipleMemoryUsed";
+    constexpr auto EVENT_NAME_SINGLE_MEMORY_USED = L"SingleMemoryUsed";
+    constexpr auto EVENT_NAME_SHARED_MEMORY_USED = L"SharedMemoryUsed";
+    constexpr auto EVENT_NAME_MEMORY_BODY_OPENED = L"MemoryBodyOpened";
+    constexpr auto EVENT_NAME_MEMORY_FLYOUT_OPEN_BEGIN = L"MemoryFlyoutOpenBegin";
+    constexpr auto EVENT_NAME_MEMORY_FLYOUT_OPEN_END = L"MemoryFlyoutOpenEnd";
+    constexpr auto EVENT_NAME_MEMORY_CLEAR_ALL = L"MemoryClearAll";
+    constexpr auto EVENT_NAME_INVALID_INPUT_PASTED = L"InvalidInputPasted";
+    constexpr auto EVENT_NAME_VALID_INPUT_PASTED = L"ValidInputPasted";
+    constexpr auto EVENT_NAME_BITFLIP_PANE_CLICKED = L"BitFlipPaneClicked";
+    constexpr auto EVENT_NAME_BITFLIP_BUTTONS_USED = L"BitFlipToggleButtonUsed";
+    constexpr auto EVENT_NAME_ANGLE_BUTTONS_USED = L"AngleButtonUsedInSession";
+    constexpr auto EVENT_NAME_HYP_BUTTON_USED = L"HypButtonUsedInSession";
+    constexpr auto EVENT_NAME_FUNCTION_USAGE = L"FunctionUsageInSession";
+    constexpr auto EVENT_NAME_BITLENGTH_BUTTON_USED = L"BitLengthButtonUsed";
+    constexpr auto EVENT_NAME_RADIX_BUTTON_USED = L"RadixButtonUsed";
+    constexpr auto EVENT_NAME_MAX_WINDOW_COUNT = L"MaxWindowCountInSession";
+    constexpr auto EVENT_NAME_WINDOW_LAUNCHED_PROTOCOL = L"WindowActivatedThroughProtocol";
+    constexpr auto EVENT_NAME_WINDOW_LAUNCHED_TILESEARCH = L"WindowLaunchedThroughTile";
+    constexpr auto EVENT_NAME_DATE_DIFFERENCE_USED = L"DateDifferenceModeUsed";
+    constexpr auto EVENT_NAME_DATE_ADD_SUBTRACT_USED = L"DateAddSubtractModeUsed";
+    constexpr auto EVENT_NAME_DATE_DIFFERENCE_FOUND = L"DateDifferenceFound";
+    constexpr auto EVENT_NAME_HIDE_IF_SHOWN = L"HideIfShown";
+    constexpr auto EVENT_NAME_ABOUT_FLYOUT_OPENED = L"AboutFlyoutOpened";
+    constexpr auto EVENT_NAME_NAV_BAR_OPENED = L"NavBarOpened";
+    constexpr auto EVENT_NAME_CORE_WINDOW_WAS_NULL = L"CoreWindowWasNull";
 
-    constexpr auto EVENT_NAME_EXCEPTION                                                 = L"Exception";
+    constexpr auto EVENT_NAME_EXCEPTION = L"Exception";
 
 #ifdef SEND_TELEMETRY
     // c.f. WINEVENT_KEYWORD_RESERVED_63-56 0xFF00000000000000 // Bits 63-56 - channel keywords
@@ -577,7 +577,7 @@ namespace CalculatorApp
         // Writer lock for the static resources
         reader_writer_lock::scoped_lock lock(s_traceLoggerLock);
         auto iterMap = s_memoryMap.find(windowId);
-        
+
         LoggingFields fields{};
         LogTelemetryEvent(EVENT_NAME_MEMORY_CLEAR_ALL, fields);
 

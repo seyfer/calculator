@@ -9,7 +9,7 @@ namespace UnitConversionManager
 
     struct Unit
     {
-        Unit(){}
+        Unit() {}
         Unit(int id, std::wstring name, std::wstring abbreviation, bool isConversionSource, bool isConversionTarget, bool isWhimsical)
             : id(id), name(name), accessibleName(name), abbreviation(abbreviation), isConversionSource(isConversionSource), isConversionTarget(isConversionTarget), isWhimsical(isWhimsical)
         {
@@ -55,7 +55,7 @@ namespace UnitConversionManager
 
     struct Category
     {
-        Category(){}
+        Category() {}
 
         Category(int id, std::wstring name, bool supportsNegative) : id(id), name(name), supportsNegative(supportsNegative)
         {
@@ -101,7 +101,7 @@ namespace UnitConversionManager
 
     struct ConversionData
     {
-        ConversionData(){}
+        ConversionData() {}
         ConversionData(double ratio, double offset, bool offsetFirst) : ratio(ratio), offset(offset), offsetFirst(offsetFirst)
         {
         }

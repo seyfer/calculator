@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 //
@@ -179,7 +179,7 @@ task<void> App::SetupJumpList()
         for (NavCategory^ option : calculatorOptions->Categories)
         {
             ViewMode mode = option->Mode;
-            auto item = JumpListItem::CreateWithArguments(((int)mode).ToString(), L"ms-resource:///Resources/"+ NavCategory::GetNameResourceKey(mode));
+            auto item = JumpListItem::CreateWithArguments(((int)mode).ToString(), L"ms-resource:///Resources/" + NavCategory::GetNameResourceKey(mode));
             item->Description = L"ms-resource:///Resources/" + NavCategory::GetNameResourceKey(mode);
             item->GroupName = L"ms-resource:///Resources/" + NavCategoryGroup::GetHeaderResourceKey(calculatorOptions->GroupType);
             item->Logo = ref new Uri("ms-appx:///Assets/" + mode.ToString() + ".png");
@@ -189,7 +189,7 @@ task<void> App::SetupJumpList()
 
         co_await jumpList->SaveAsync();
     }
-    catch(...) {}
+    catch (...) {}
 }
 
 void App::RemoveSecondaryWindow(_In_ WindowFrameService^ frameService)
@@ -357,7 +357,7 @@ void App::OnAppLaunch(IActivatedEventArgs^ args, String^ argument)
                                     ViewSizePreference::Default,
                                     activatedEventArgs->CurrentlyShownApplicationViewId,
                                     ViewSizePreference::Default
-                                    ))
+                                ))
                                     .then([safeFrameServiceCreation](bool viewShown)
                                 {
                                     // SafeFrameServiceCreation is used to automatically remove the frame

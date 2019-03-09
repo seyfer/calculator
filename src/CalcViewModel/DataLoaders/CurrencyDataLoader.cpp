@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -203,7 +203,7 @@ void CurrencyDataLoader::LoadData()
                 }
             }
 
-            co_return didLoad;            
+            co_return didLoad;
         }).then([this](bool didLoad)
         {
             UpdateDisplayedTimestamp();
@@ -329,7 +329,7 @@ task<bool> CurrencyDataLoader::TryLoadDataFromCacheAsync()
         {
             loadComplete = co_await TryLoadDataFromWebAsync();
         }
-        
+
         if (!loadComplete)
         {
             loadComplete = co_await TryFinishLoadFromCacheAsync();
@@ -578,7 +578,7 @@ bool CurrencyDataLoader::TryParseAllRatiosData(_In_ String^ rawJson, _Inout_ Cur
             relativeRatio,
             sourceCurrencyCode,
             targetCurrencyCode
-        });
+            });
     }
 
     return true;

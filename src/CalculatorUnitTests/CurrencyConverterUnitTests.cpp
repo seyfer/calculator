@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -264,7 +264,7 @@ namespace CalculatorUnitTests
             VERIFY_IS_FALSE(loader.LoadFinished());
             VERIFY_IS_FALSE(loader.LoadedFromCache());
         }
-        
+
         TEST_METHOD(LoadFromCache_Fail_ResponseLanguageChanged)
         {
             DateTime now = Utils::GetUniversalSystemTime();

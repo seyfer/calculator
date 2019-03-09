@@ -68,7 +68,7 @@ UnitConverter::UnitConverter() :
         // Currency symbol should appear on the right. Reverse the order of children.
         Grid::SetColumn(Value1, 0);
         Grid::SetColumn(CurrencySymbol1Block, 1);
-        
+
         Grid::SetColumn(Value2, 0);
         Grid::SetColumn(CurrencySymbol2Block, 1);
     }
@@ -268,7 +268,7 @@ void UnitConverter::OnPasteMenuItemClicked(_In_ Object^ sender, _In_ RoutedEvent
 
 void UnitConverter::AnimateConverter()
 {
-    
+
     if (App::IsAnimationEnabled())
     {
         AnimationStory->Begin();

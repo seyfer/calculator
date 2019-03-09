@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -6,7 +6,7 @@
 #include "Rational.h"
 
 // Space to hold enough digits for a quadword binary number (64) plus digit separator strings for that number (20)
-constexpr int MAX_STRLEN = 84; 
+constexpr int MAX_STRLEN = 84;
 
 namespace CalcEngine
 {

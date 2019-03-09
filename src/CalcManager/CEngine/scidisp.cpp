@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 /****************************Module*Header***********************************\
@@ -64,7 +64,7 @@ CalcEngine::Rational CCalcEngine::TruncateNumForIntMath(CalcEngine::Rational con
     if (result < 0)
     {
         // if negative make positive by doing a twos complement
-        result = -(result) - 1;
+        result = -(result)-1;
         result ^= m_chopNumbers[m_numwidth];
     }
 
@@ -145,7 +145,7 @@ int CCalcEngine::IsNumberInvalid(const wstring& numberString, int iMaxExp, int i
         // in case there's an exponent:
         //      its optionally followed by a + or -
         //      which is followed by zero or more digits
-        wregex rx(wstring{ c_decPreSepStr } + m_decimalSeparator + wstring{ c_decPostSepStr });
+        wregex rx(wstring{ c_decPreSepStr } +m_decimalSeparator + wstring{ c_decPostSepStr });
         wsmatch matches;
         if (regex_match(numberString, matches, rx))
         {

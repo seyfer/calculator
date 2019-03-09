@@ -139,5 +139,5 @@ namespace CalculatorApp
         void OnHistoryAccessKeyInvoked(_In_ Windows::UI::Xaml::UIElement^ sender, _In_ Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs^ args);
         void OnMemoryAccessKeyInvoked(_In_ Windows::UI::Xaml::UIElement^ sender, _In_ Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs^ args);
         void DockPivot_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e);
-};
+    };
 }

@@ -29,23 +29,23 @@ static constexpr array<const NavCategoryGroupInitializer, 2> s_categoryGroupMani
 };
 
 // vvv THESE CONSTANTS SHOULD NEVER CHANGE vvv
-static constexpr int STANDARD_ID    = 0;
-static constexpr int SCIENTIFIC_ID  = 1;
-static constexpr int PROGRAMMER_ID  = 2;
-static constexpr int DATE_ID        = 3;
-static constexpr int VOLUME_ID      = 4;
-static constexpr int LENGTH_ID      = 5;
-static constexpr int WEIGHT_ID      = 6;
+static constexpr int STANDARD_ID = 0;
+static constexpr int SCIENTIFIC_ID = 1;
+static constexpr int PROGRAMMER_ID = 2;
+static constexpr int DATE_ID = 3;
+static constexpr int VOLUME_ID = 4;
+static constexpr int LENGTH_ID = 5;
+static constexpr int WEIGHT_ID = 6;
 static constexpr int TEMPERATURE_ID = 7;
-static constexpr int ENERGY_ID      = 8;
-static constexpr int AREA_ID        = 9;
-static constexpr int SPEED_ID       = 10;
-static constexpr int TIME_ID        = 11;
-static constexpr int POWER_ID       = 12;
-static constexpr int DATA_ID        = 13;
-static constexpr int PRESSURE_ID    = 14;
-static constexpr int ANGLE_ID       = 15;
-static constexpr int CURRENCY_ID    = 16;
+static constexpr int ENERGY_ID = 8;
+static constexpr int AREA_ID = 9;
+static constexpr int SPEED_ID = 10;
+static constexpr int TIME_ID = 11;
+static constexpr int POWER_ID = 12;
+static constexpr int DATA_ID = 13;
+static constexpr int PRESSURE_ID = 14;
+static constexpr int ANGLE_ID = 15;
+static constexpr int CURRENCY_ID = 16;
 // ^^^ THESE CONSTANTS SHOULD NEVER CHANGE ^^^
 
 // The order of items in this list determines the order of items in the menu.

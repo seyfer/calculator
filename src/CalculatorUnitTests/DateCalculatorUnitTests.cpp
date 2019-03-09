@@ -193,7 +193,7 @@ namespace DateCalculationUnitTests
         /*Subtract Out of bound Tests*/
         TEST_METHOD(TestSubtractOob)
         {
-            for (int testIndex = 0; testIndex< c_numSubtractOobDate; testIndex++)
+            for (int testIndex = 0; testIndex < c_numSubtractOobDate; testIndex++)
             {
                 DateTime endDate;
 

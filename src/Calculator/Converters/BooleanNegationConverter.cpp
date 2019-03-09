@@ -12,9 +12,9 @@ using namespace Windows::UI::Xaml::Interop;
 
 Object^ BooleanNegationConverter::Convert(Object^ value, TypeName targetType, Object^ parameter, String^ language)
 {
-    (void) targetType;    // Unused parameter
-    (void) parameter;    // Unused parameter
-    (void) language;    // Unused parameter
+    (void)targetType;    // Unused parameter
+    (void)parameter;    // Unused parameter
+    (void)language;    // Unused parameter
 
     auto boxedBool = dynamic_cast<Box<bool>^>(value);
     auto boolValue = (boxedBool != nullptr && boxedBool->Value);
@@ -23,9 +23,9 @@ Object^ BooleanNegationConverter::Convert(Object^ value, TypeName targetType, Ob
 
 Object^ BooleanNegationConverter::ConvertBack(Object^ value, TypeName targetType, Object^ parameter, String^ language)
 {
-    (void) targetType;    // Unused parameter
-    (void) parameter;    // Unused parameter
-    (void) language;    // Unused parameter
+    (void)targetType;    // Unused parameter
+    (void)parameter;    // Unused parameter
+    (void)language;    // Unused parameter
 
     auto boxedBool = dynamic_cast<Box<bool>^>(value);
     auto boolValue = (boxedBool != nullptr && boxedBool->Value);

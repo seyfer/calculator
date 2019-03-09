@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -191,7 +191,7 @@ namespace CalculationManager
     /// </summary>
     void CalculatorManager::SetProgrammerMode()
     {
-        if(!m_programmerCalculatorEngine)
+        if (!m_programmerCalculatorEngine)
         {
             m_programmerCalculatorEngine = make_unique<CCalcEngine>(true /* Respect Order of Operations */, true /* Set to Integer Mode */, m_resourceProvider, this, nullptr);
         }
@@ -754,7 +754,7 @@ namespace CalculationManager
     }
 
     void CalculatorManager::UpdateMaxIntDigits()
-    { 
+    {
         m_currentCalculatorEngine->UpdateMaxIntDigits();
     }
 

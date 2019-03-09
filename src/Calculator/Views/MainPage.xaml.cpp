@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -83,7 +83,7 @@ MainPage::MainPage() :
         {
             DisplayInformation::AutoRotationPreferences = DisplayOrientations::Portrait | DisplayOrientations::PortraitFlipped;
         }
-    }    
+    }
 }
 
 void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
@@ -198,7 +198,7 @@ void MainPage::ShowHideControls(ViewMode mode)
     auto isCalcViewMode = NavCategory::IsCalculatorViewMode(mode);
     auto isDateCalcViewMode = NavCategory::IsDateCalculatorViewMode(mode);
     auto isConverterViewMode = NavCategory::IsConverterViewMode(mode);
-    
+
     if (m_calculator)
     {
         m_calculator->Visibility = BooleanToVisibilityConverter::Convert(isCalcViewMode);
@@ -278,7 +278,7 @@ void MainPage::PinUnpinAppBarButtonOnClicked(
     _In_ Object^ sender,
     _In_ RoutedEventArgs^ e)
 {
-     m_model->CalculatorViewModel->OnPinUnpinCommand(sender);
+    m_model->CalculatorViewModel->OnPinUnpinCommand(sender);
 }
 
 void MainPage::SetDefaultFocus()
@@ -503,7 +503,7 @@ void MainPage::ColorValuesChanged(_In_ UISettings^ sender, _In_ Object^ e)
 {
     WeakReference weakThis(this);
     RunOnUIThreadNonblocking([weakThis]()
-    { 
+    {
         auto refThis = weakThis.Resolve<MainPage>();
         if (refThis != nullptr)
         {
@@ -578,7 +578,7 @@ void MainPage::SetHeaderAutomationName()
         {
             full = resProvider.GetResourceString(L"HeaderAutomationName_Converter")->Data();
         }
-        
+
         string::size_type found = full.find(L"%1");
         wstring strMode = m_model->CategoryName->Data();
         full = full.replace(found, 2, strMode);

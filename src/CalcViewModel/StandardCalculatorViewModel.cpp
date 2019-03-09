@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -42,7 +42,7 @@ namespace CalculatorApp::ViewModel
         StringReference IsInError(L"IsInError");
         StringReference BinaryDisplayValue(L"BinaryDisplayValue");
     }
-    
+
     namespace CalculatorResourceKeys
     {
         StringReference CalculatorExpression(L"Format_CalculatorExpression");
@@ -504,7 +504,7 @@ void StandardCalculatorViewModel::HandleUpdatedOperandData(Command cmdenum)
         {
             if (commandIndex == 0)
             {
-                delete [] temp;
+                delete[] temp;
                 return;
             }
 
@@ -572,7 +572,7 @@ void StandardCalculatorViewModel::OnButtonPressed(Object^ parameter)
     if (IsInError)
     {
         m_standardCalculatorManager.SendCommand(Command::CommandCLEAR);
-        
+
         if (!IsRecoverableCommand((int)numOpEnum))
         {
             return;
@@ -1396,29 +1396,29 @@ void StandardCalculatorViewModel::SaveEditedCommand(_In_ unsigned int tokenPosit
 
         switch (nOpCode)
         {
-        case static_cast<int>(Command::CommandASIN) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandSIN), true, angleType);
-            break;
-        case static_cast<int>(Command::CommandACOS) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandCOS), true, angleType);
-            break;
-        case static_cast<int>(Command::CommandATAN) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandTAN), true, angleType);
-            break;
-        case static_cast<int>(Command::CommandASINH) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandSINH), true, angleType);
-            break;
-        case static_cast<int>(Command::CommandACOSH) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandCOSH), true, angleType);
-            break;
-        case static_cast<int>(Command::CommandATANH) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandTANH), true, angleType);
-            break;
-        case static_cast<int>(Command::CommandPOWE) :
-            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandLN), true, angleType);
-            break;
-        default:
-            updatedToken = CCalcEngine::OpCodeToUnaryString(nOpCode, false, angleType);
+            case static_cast<int>(Command::CommandASIN) :
+                updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandSIN), true, angleType);
+                break;
+                case static_cast<int>(Command::CommandACOS) :
+                    updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandCOS), true, angleType);
+                    break;
+                    case static_cast<int>(Command::CommandATAN) :
+                        updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandTAN), true, angleType);
+                        break;
+                        case static_cast<int>(Command::CommandASINH) :
+                            updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandSINH), true, angleType);
+                            break;
+                            case static_cast<int>(Command::CommandACOSH) :
+                                updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandCOSH), true, angleType);
+                                break;
+                                case static_cast<int>(Command::CommandATANH) :
+                                    updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandTANH), true, angleType);
+                                    break;
+                                    case static_cast<int>(Command::CommandPOWE) :
+                                        updatedToken = CCalcEngine::OpCodeToUnaryString(static_cast<int>(Command::CommandLN), true, angleType);
+                                        break;
+                                    default:
+                                        updatedToken = CCalcEngine::OpCodeToUnaryString(nOpCode, false, angleType);
         }
         if ((token.first.length() > 0) && (token.first[token.first.length() - 1] == L'('))
         {

@@ -2,7 +2,7 @@
     "default": {
         "from": "USD",
         "to": "EUR"
-	},
+    },
     "ar-AE": {
         "from": "USD",
         "to": "AED"

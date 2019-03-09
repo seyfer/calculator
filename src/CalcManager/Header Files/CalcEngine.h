@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #pragma once
@@ -53,7 +53,7 @@ class CCalcEngine {
 public:
     CCalcEngine(bool fPrecedence, bool fIntegerMode, CalculationManager::IResourceProvider* const pResourceProvider, __in_opt ICalcDisplay *pCalcDisplay, __in_opt std::shared_ptr<IHistoryDisplay> pHistoryDisplay);
     void ProcessCommand(WPARAM wID);
-    void DisplayError (DWORD   nError);
+    void DisplayError(DWORD   nError);
     std::unique_ptr<CalcEngine::Rational> PersistedMemObject();
     void PersistedMemObject(CalcEngine::Rational const& memObject);
     bool FInErrorState() { return m_bError; }
@@ -140,7 +140,7 @@ private:
     CalcEngine::Rational DoOperation(int operation, CalcEngine::Rational const& lhs, CalcEngine::Rational const& rhs);
     void SetRadixTypeAndNumWidth(RADIX_TYPE radixtype, NUM_WIDTH numwidth);
     LONG DwWordBitWidthFromeNumWidth(NUM_WIDTH numwidth);
-    uint32_t NRadixFromRadixType( RADIX_TYPE radixtype);
+    uint32_t NRadixFromRadixType(RADIX_TYPE radixtype);
 
     bool TryToggleBit(CalcEngine::Rational& rat, DWORD wbitno);
     void CheckAndAddLastBinOpToHistory(bool addToHistory = true);

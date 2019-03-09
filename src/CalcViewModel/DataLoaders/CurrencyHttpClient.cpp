@@ -31,7 +31,7 @@ void CurrencyHttpClient::SetResponseLanguage(String^ responseLanguage)
 
 IAsyncOperationWithProgress<String^, HttpProgress>^ CurrencyHttpClient::GetCurrencyMetadata()
 {
-    wstring uri = wstring{ sc_MetadataUriLocalizeFor } + m_responseLanguage->Data();
+    wstring uri = wstring{ sc_MetadataUriLocalizeFor } +m_responseLanguage->Data();
     auto metadataUri = ref new Uri(StringReference(uri.c_str()));
 
     return m_client->GetStringAsync(metadataUri);
@@ -39,7 +39,7 @@ IAsyncOperationWithProgress<String^, HttpProgress>^ CurrencyHttpClient::GetCurre
 
 IAsyncOperationWithProgress<String^, HttpProgress>^ CurrencyHttpClient::GetCurrencyRatios()
 {
-    wstring uri = wstring{ sc_RatiosUriRelativeTo } + m_sourceCurrencyCode->Data();
+    wstring uri = wstring{ sc_RatiosUriRelativeTo } +m_sourceCurrencyCode->Data();
     auto ratiosUri = ref new Uri(StringReference(uri.c_str()));
 
     return m_client->GetStringAsync(ratiosUri);

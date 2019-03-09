@@ -13,9 +13,9 @@ using namespace Windows::UI::Xaml::Interop;
 
 Object^ ItemSizeToVisibilityConverter::Convert(Object^ value, TypeName targetType, Object^ parameter, String^ language)
 {
-    (void) targetType;    // Unused parameter
-    (void) parameter;    // Unused parameter
-    (void) language;    // Unused parameter
+    (void)targetType;    // Unused parameter
+    (void)parameter;    // Unused parameter
+    (void)language;    // Unused parameter
 
     auto items = dynamic_cast<Box<int>^>(value);
     auto boolValue = (items != nullptr && (items->Value == 0));
@@ -29,9 +29,9 @@ Object^ ItemSizeToVisibilityConverter::ConvertBack(Object^ value, TypeName targe
 
 Object^ ItemSizeToVisibilityNegationConverter::Convert(Object^ value, TypeName targetType, Object^ parameter, String^ language)
 {
-    (void) targetType;    // Unused parameter
-    (void) parameter;    // Unused parameter
-    (void) language;    // Unused parameter
+    (void)targetType;    // Unused parameter
+    (void)parameter;    // Unused parameter
+    (void)language;    // Unused parameter
 
     auto items = dynamic_cast<Box<int>^>(value);
     auto boolValue = (items != nullptr && (items->Value > 0));

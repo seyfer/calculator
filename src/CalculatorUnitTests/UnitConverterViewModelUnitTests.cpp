@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -1055,7 +1055,7 @@ namespace CalculatorUnitTests
                 UNIT1,
                 UNIT2,
                 UNIT3
-            });
+                });
 
             VERIFY_ARE_EQUAL(3u, vm.Units->Size);
             VERIFY_ARE_EQUAL(UNIT1.id, (vm.Units->GetAt(0)->GetModelUnit()).id);
@@ -1072,7 +1072,7 @@ namespace CalculatorUnitTests
                 UNIT1,
                 UNIT2,
                 UNIT3
-            });
+                });
 
             Unit^ foundUnit = vm.FindUnitInList(UNIT1);
             VERIFY_ARE_EQUAL(UNIT1.id, foundUnit->GetModelUnit().id);

@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -443,7 +443,7 @@ wstring UnitConverter::Quote(const wstring& s)
 
     //Iterate over the delimiter characters we need to quote
     wstring::const_iterator cursor = s.begin();
-    while(cursor != s.end())
+    while (cursor != s.end())
     {
         if (quoteConversions.find(*cursor) != quoteConversions.end())
         {
@@ -467,9 +467,9 @@ wstring UnitConverter::Unquote(const wstring& s)
     wstringstream quotedSubString(wstringstream::out);
     wstringstream unquotedString(wstringstream::out);
     wstring::const_iterator cursor = s.begin();
-    while(cursor != s.end())
+    while (cursor != s.end())
     {
-        if(*cursor == LEFTESCAPECHAR)
+        if (*cursor == LEFTESCAPECHAR)
         {
             quotedSubString.str(L"");
             while (cursor != s.end() && *cursor != RIGHTESCAPECHAR)
@@ -625,7 +625,7 @@ void UnitConverter::SendCommand(Command command)
         default:
             break;
         }
-        
+
 
         if (clearFront)
         {
@@ -738,7 +738,7 @@ vector<tuple<wstring, Unit>> UnitConverter::CalculateSuggested()
             newEntry.magnitude = log10(convertedValue);
             newEntry.value = convertedValue;
             newEntry.type = cur.first;
-            if(newEntry.type.isWhimsical == false)
+            if (newEntry.type.isWhimsical == false)
                 intermediateVector.push_back(newEntry);
             else
                 intermediateWhimsicalVector.push_back(newEntry);
@@ -748,13 +748,13 @@ vector<tuple<wstring, Unit>> UnitConverter::CalculateSuggested()
     //Sort the resulting list by absolute magnitude, breaking ties by choosing the positive value
     sort(intermediateVector.begin(), intermediateVector.end(), []
     (SuggestedValueIntermediate first, SuggestedValueIntermediate second)
-    { 
-        if (abs(first.magnitude) == abs(second.magnitude)) 
-        { 
-            return first.magnitude > second.magnitude; 
-        } 
-        else 
-        { 
+    {
+        if (abs(first.magnitude) == abs(second.magnitude))
+        {
+            return first.magnitude > second.magnitude;
+        }
+        else
+        {
             return abs(first.magnitude) < abs(second.magnitude);
         }
     });
@@ -769,7 +769,7 @@ vector<tuple<wstring, Unit>> UnitConverter::CalculateSuggested()
         }
         else if (abs(entry.value) < 1000)
         {
-        roundedString = RoundSignificant(entry.value, 1);
+            roundedString = RoundSignificant(entry.value, 1);
         }
         else
         {
@@ -1032,7 +1032,7 @@ void UnitConverter::TrimString(wstring& returnString)
     if (returnString.find(L'.') != m_returnDisplay.npos)
     {
         wstring::iterator iter;
-        for (iter = returnString.end() - 1; ;iter--)
+        for (iter = returnString.end() - 1; ; iter--)
         {
             if (*iter != L'0')
             {
@@ -1040,9 +1040,9 @@ void UnitConverter::TrimString(wstring& returnString)
                 break;
             }
         }
-        if (*(returnString.end()-1) == L'.')
+        if (*(returnString.end() - 1) == L'.')
         {
-            returnString.erase(returnString.end()-1, returnString.end());
+            returnString.erase(returnString.end() - 1, returnString.end());
         }
     }
 }
